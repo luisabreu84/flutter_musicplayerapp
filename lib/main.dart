@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:musicplayerapp/pages/home_page.dart';
+import 'package:musicplayerapp/pages/home/home_page.dart';
 import 'package:musicplayerapp/pages/intro_page.dart';
 
 void main() {

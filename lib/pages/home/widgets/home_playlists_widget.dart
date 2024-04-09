@@ -9,9 +9,9 @@ class HomePlayList extends StatelessWidget {
     final playList = PlayList.getPlayLists();
 
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16),
+      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 0),
       child: SizedBox(
-        height: 300,
+        height: 240,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 250,
@@ -33,7 +33,7 @@ class HomePlayList extends StatelessWidget {
                       width: 56,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(playList[index].image),
+                            image: AssetImage(playList[index].image),
                             fit: BoxFit.cover),
                         borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(4),

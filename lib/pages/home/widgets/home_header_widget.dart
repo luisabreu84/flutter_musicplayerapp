@@ -10,12 +10,7 @@ class HomeHeader extends StatelessWidget {
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 12),
       child: Row(
         children: <Widget>[
-          CircleAvatar(
-            radius: 16,
-            backgroundImage: AssetImage("assets/images/intro.png"),
-          ),
-          SizedBox(width: 5),
-          Text("Hi Luis",
+          Text("Good evening",
               style: TextStyle(
                   color: Color(0xffffffff),
                   fontWeight: FontWeight.w500,

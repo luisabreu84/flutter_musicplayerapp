@@ -39,8 +39,8 @@ class FooterAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.library_music, color: Colors.white70),
-                Text("Library", style: TextStyle(color: Colors.white70)),
+                Icon(Icons.event_available_outlined, color: Colors.white70),
+                Text("Events", style: TextStyle(color: Colors.white70)),
               ],
             ),
             Column(

@@ -12,12 +12,12 @@ class HomeNewRelease extends StatelessWidget {
       titleBuilder: (context) {
       return Padding(
           padding:
-              const EdgeInsets.only(left: 16, top: 0, bottom: 10, right: 16),
+              const EdgeInsets.only(left: 16, top: 5, bottom: 10, right: 16),
           child: Row(
             children: <Widget>[
               const CircleAvatar(
                 radius: 32,
-                backgroundImage: AssetImage("assets/images/davidguetta.png"),
+                backgroundImage: AssetImage("assets/images/metallica.png"),
               ),
               const SizedBox(width: 16),
               Column(
@@ -31,7 +31,7 @@ class HomeNewRelease extends StatelessWidget {
                           fontFamily: "Raleway",
                           fontStyle: FontStyle.normal,
                           fontSize: 12.0)),
-                  const Text("David Guetta",
+                  const Text("Metallica",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
@@ -55,7 +55,7 @@ class HomeNewRelease extends StatelessWidget {
               width: 142,
               decoration: BoxDecoration(
                 image: const DecorationImage(
-                    image: AssetImage('assets/images/davidguettaww.jpeg'),
+                    image: AssetImage('assets/images/master.jpeg'),
                     fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(radius),
@@ -78,34 +78,34 @@ class HomeNewRelease extends StatelessWidget {
                       // title
                       const Padding(
                         padding: EdgeInsets.only(left: 16, right: 0, top: 10),
-                        child: Text("I Don't Wanna Wait",
+                        child: Text("Master Of Puppets",
                             style: TextStyle(
                                 color: Color(0xffffffff),
                                 fontWeight: FontWeight.w700,
                                 fontFamily: "Raleway",
                                 fontStyle: FontStyle.normal,
-                                fontSize: 13.0),
+                                fontSize: 16.0),
                             textAlign: TextAlign.left),
                       ),
-                      const SizedBox(height: 4),
+                      const SizedBox(height: 2),
                       const Padding(
                         padding: EdgeInsets.only(left: 16, right: 16),
                         child: SizedBox(
                           width: 150,
                           child: Text(
-                            "Single • David Guetta, OneRepublic",
+                            "Metallica • Long Play",
                             style: TextStyle(
                               color: Color(0xffa7a7a7),
                               fontWeight: FontWeight.w600,
                               fontStyle: FontStyle.normal,
-                              fontSize: 13.0,
+                              fontSize: 14.0,
                               overflow: TextOverflow.ellipsis,
                             ),
                             maxLines: 2,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 35),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

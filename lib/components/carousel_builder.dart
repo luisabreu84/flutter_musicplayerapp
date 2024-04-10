@@ -17,8 +17,8 @@ class CarouselBuilder extends StatelessWidget {
           bool last = list.length == (index + 1);
           return Padding(
             padding: EdgeInsets.only(
-              left: 16,
-              right: last ? 16 : 0,
+              left: 12,
+              right: last ? 12 : 0,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

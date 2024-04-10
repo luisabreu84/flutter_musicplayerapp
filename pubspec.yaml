@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   simple_animations: ^5.0.2
   video_player: ^2.8.5
+  sticky_headers: ^0.3.0+2
 
 dev_dependencies:
   flutter_test:

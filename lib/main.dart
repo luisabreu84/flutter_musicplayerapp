@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'intro',
       routes: {
         'intro': ( _ ) => const IntroPage(),
-        'home': ( _ ) => const HomePage(),
+        'home': ( _ ) => HomePage(),
         //'signup': ( _ ) => const HomePage(),
       },
       theme: ThemeData(

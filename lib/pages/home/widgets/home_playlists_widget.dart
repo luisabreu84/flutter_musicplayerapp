@@ -9,7 +9,7 @@ class HomePlayList extends StatelessWidget {
     final playList = PlayList.getPlayLists();
 
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 0),
+      padding: const EdgeInsets.only(left: 12, right: 12, bottom: 0, top: 5),
       child: SizedBox(
         height: 240,
         child: GridView.builder(

@@ -9,7 +9,7 @@ class JumpBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Section(
-      title: 'Recommended radio',
+      title: 'Radio stations',
       bodyBuilder: (context) {
         return CarouselBuilder(list: CarouselItem.getRadioList());
       },
@@ -23,7 +23,8 @@ class Suggestions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Section(
-      title: 'Suggested stations',
+      sectionPadding: const EdgeInsets.only(top: 0, bottom: 140),
+      title: 'Suggested for you',
       bodyBuilder: (context) {
         return CarouselBuilder(list: CarouselItem.getRadioList().reversed.toList());
       },

@@ -8,7 +8,7 @@ class PlayList {
 
   static List<PlayList> getPlayLists() {
     return [
-      PlayList(name: "Greatest Hits 80s 90s", image: 'assets/images/pl1.png'),
+      PlayList(name: "Greatest Hits 80's & 90's", image: 'assets/images/pl1.png'),
       PlayList(name: "Live Radio", image: 'assets/images/pl2.png'),
       PlayList(name: "Hip Hop", image: 'assets/images/pl3.png'),
       PlayList(name: "Love Bug", image: 'assets/images/pl4.png'),

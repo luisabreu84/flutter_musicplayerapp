@@ -14,7 +14,7 @@ class CarouselItem {
       ),
       CarouselItem(
         title: "",
-        description: "Nirvana, Peral Jam, The Smashing Pumpkins, Incubus",
+        description: "Nirvana, Pearl Jam, The Smashing Pumpkins, Incubus",
         image: 'assets/images/r2.png'
       ),
       CarouselItem(

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class HomeVideoSection extends StatefulWidget {
-  const HomeVideoSection({super.key});
+class VideoSection extends StatefulWidget {
+  const VideoSection({super.key});
 
   @override
-  State<HomeVideoSection> createState() => _HomeVideoSectionState();
+  State<VideoSection> createState() => _VideoSectionState();
 }
 
-class _HomeVideoSectionState extends State<HomeVideoSection> {
+class _VideoSectionState extends State<VideoSection> {
   late VideoPlayerController _controller;
 
   @override @override
@@ -36,15 +36,16 @@ class _HomeVideoSectionState extends State<HomeVideoSection> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 10, bottom: 20),
+      padding: const EdgeInsets.only(left: 12, right: 12, bottom: 20),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: AspectRatio(
           aspectRatio: 6/5,
           child: Stack(
             children: <Widget>[
-              VideoPlayer(_controller),
-              _getBackgroundColor(),
+              getVideoLayer(),
+              getOpactityLayer(),
+              getUILayer()
             ],
           ),
         ),
@@ -52,9 +53,60 @@ class _HomeVideoSectionState extends State<HomeVideoSection> {
     );
   }
 
-  _getBackgroundColor() {
+  Widget getVideoLayer() {
+    return VideoPlayer(_controller);
+  }
+
+  Widget getOpactityLayer() {
     return Container(
       color: Colors.grey.withOpacity(0.2),
+    );
+  }
+
+  Widget getUILayer(){
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              const Text(
+                'Local Events',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              const Expanded(child: SizedBox()),
+              IconButton(
+                icon: const Icon(Icons.location_pin, size: 35),
+                onPressed: () {},
+                color: Colors.white,
+              )
+            ],
+          ),
+          const Expanded(child: SizedBox()),
+          const Text(
+            'Events, Art, Music and More',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+          const Text(
+            'check out the event schedule',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.w300
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -2,13 +2,22 @@
 
 A new music app template using Flutter framework.
 
-# Some nice stuff: 
+# Music Player UI Kit Features
 
 - Sticky Bar
 - List view with combined widgets types
 - Bottom player bar
 - Bottom navigation bar
 - Navigation between option (Content) without removing the player bar
+
+# Well Structured Code: "Clean Code Practices"
+
+Lib
+-> Animations
+-> Components
+-> Models
+-> Pages
+-> Widgets
 
 ## Getting Started
 

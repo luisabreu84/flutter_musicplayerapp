@@ -13,11 +13,11 @@ A new music app template using Flutter framework.
 # Well Structured Code: "Clean Code Practices"
 
 Lib
--> Animations
--> Components
--> Models
--> Pages
--> Widgets
+- Animations
+- Components
+- Models
+- Pages
+- Widgets
 
 ## Getting Started
 

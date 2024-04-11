@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:musicplayerapp/pages/home/home_page.dart';
 import 'package:musicplayerapp/pages/intro_page.dart';
+import 'package:musicplayerapp/pages/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'intro',
       routes: {
         'intro': ( _ ) => const IntroPage(),
-        'home': ( _ ) => HomePage(),
-        //'signup': ( _ ) => const HomePage(),
+        'home': ( _ ) => const MainPage(),
       },
       theme: ThemeData(
         brightness: Brightness.dark,

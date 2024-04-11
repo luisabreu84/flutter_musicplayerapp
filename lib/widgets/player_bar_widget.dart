@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomePlayerBar extends StatelessWidget {
-  const HomePlayerBar({super.key});
+class PlayerBar extends StatelessWidget {
+  const PlayerBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomePlayerBar extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: Colors.red.withOpacity(0.95)
+          color: Colors.blueGrey.withOpacity(0.95)
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

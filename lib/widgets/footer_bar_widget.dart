@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
 
-class FooterAppBar extends StatelessWidget {
-  const FooterAppBar({super.key});
+typedef OnTouchedCallback = void Function(int index);
+
+class FooterAppBar extends StatefulWidget {
+  const FooterAppBar({super.key, this.onTouched});
+  
+  final OnTouchedCallback? onTouched;
+
+  @override
+  State<FooterAppBar> createState() => _FooterAppBarState();
+}
+
+class _FooterAppBarState extends State<FooterAppBar> {
+  int _activeIndex = 0;
+
+  void updateIndex(int i) {
+    setState(() {
+      _activeIndex = i;
+    });
+
+    widget.onTouched!(i);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,46 +31,64 @@ class FooterAppBar extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.black.withOpacity(0.7), Colors.black],
+            colors: [Colors.black.withOpacity(0.8), Colors.black],
           ),
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.home, color: Colors.white70),
-                Text("Home", style: TextStyle(color: Colors.white70)),
-              ],
+            InkWell(
+              onTap: () => updateIndex(0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.home, color: getActiveColor(0)),
+                  Text("Home", style: TextStyle(color: getActiveColor(0))),
+                ],
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.search, color: Colors.white70),
-                Text("Search", style: TextStyle(color: Colors.white70)),
-              ],
+            InkWell(
+             onTap: () => updateIndex(1),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.search, color: getActiveColor(1)),
+                  Text("Search", style: TextStyle(color: getActiveColor(1))),
+                ],
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.event_available_outlined, color: Colors.white70),
-                Text("Events", style: TextStyle(color: Colors.white70)),
-              ],
+            InkWell
+            (
+              onTap: () => updateIndex(2),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.event_seat, color: getActiveColor(2)),
+                  Text("Events", style: TextStyle(color: getActiveColor(2))),
+                ],
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.settings, color: Colors.white70),
-                Text("Settings", style: TextStyle(color: Colors.white70)),
-              ],
-            ),
+            InkWell
+            (
+              onTap: () => updateIndex(3),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.settings, color: getActiveColor(3)),
+                  Text("Settings", style: TextStyle(color: getActiveColor(3))),
+                ],
+              ),
+            )
           ],
         ));
+  }
+  
+  Color getActiveColor(int index) {
+    return _activeIndex == index ? Colors.blueGrey : Colors.white;
   }
 }

@@ -1,6 +1,6 @@
-# musicplayerapp
+# Music Player App
 
-A new Flutter project.
+A new music app template using Flutter framework.
 
 ## Getting Started
 

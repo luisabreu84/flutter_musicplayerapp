@@ -2,6 +2,14 @@
 
 A new music app template using Flutter framework.
 
+# Some nice stuff: 
+
+- Sticky Bar
+- List view with combined widgets types
+- Bottom player bar
+- Bottom navigation bar
+- Navigation between option (Content) without removing the player bar
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

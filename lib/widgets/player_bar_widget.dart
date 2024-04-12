@@ -15,7 +15,7 @@ class PlayerBar extends StatelessWidget {
           color: Colors.blueGrey.withOpacity(0.95)
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
@@ -37,6 +37,7 @@ class PlayerBar extends StatelessWidget {
                 ),
                 const SizedBox(width: 5),
                 const Flexible(
+                  fit: FlexFit.tight,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

@@ -9,7 +9,7 @@ class HomeHeader extends StatelessWidget {
     return Container(
       color: Colors.black,
       child: const Padding(
-        padding: EdgeInsets.only(left: 12, right: 12, bottom: 10, top: 5),
+        padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
         child: Row(
           children: <Widget>[
             Text("Welcome back!",

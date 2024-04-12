@@ -30,9 +30,9 @@ class Section extends StatelessWidget {
               child: 
               Text(title.toString(), style: const TextStyle(
                     color: Color(0xffffffff),
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w500,
                     fontStyle: FontStyle.normal,
-                    fontSize: 22.0,
+                    fontSize: 21.0,
                     overflow: TextOverflow.ellipsis),
                   maxLines: 2,
                   textAlign: TextAlign.left),

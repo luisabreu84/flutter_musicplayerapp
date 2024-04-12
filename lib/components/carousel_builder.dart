@@ -3,13 +3,15 @@ import 'package:musicplayerapp/models/carouselitem.dart';
 
 class CarouselBuilder extends StatelessWidget {
   final List<CarouselItem> list;
+  
+  final double itemHeight;
 
-  const CarouselBuilder({super.key, required this.list});
+  const CarouselBuilder({super.key, required this.list, this.itemHeight = 210});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 210,
+      height: itemHeight,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: list.length,
@@ -32,22 +34,23 @@ class CarouselBuilder extends StatelessWidget {
                         fit: BoxFit.cover),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  width: 150,
-                  child: Text(list[index].description,
-                      style: const TextStyle(
-                          color: Color(0xffffffff),
-                          fontWeight: FontWeight.w700,
-                          fontFamily: "Raleway",
-                          fontStyle: FontStyle.normal,
-                          fontSize: 13.0,
-                          overflow: TextOverflow.ellipsis),
-                      maxLines: 2,
-                      textAlign: TextAlign.left),
-                ),
+                if (list[index].description.isNotEmpty) ... [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    width: 150,
+                    child: Text(list[index].description,
+                        style: const TextStyle(
+                            color: Color(0xffffffff),
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 13.0,
+                            overflow: TextOverflow.ellipsis),
+                        maxLines: 2,
+                        textAlign: TextAlign.left),
+                  ),
+                ]
               ],
             ),
           );

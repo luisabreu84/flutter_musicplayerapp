@@ -49,4 +49,39 @@ class CarouselItem {
       )
     ];
   } 
+
+  static List<CarouselItem> getGenres() {
+    return [
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g1.png'
+      ),
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g2.png'
+      ),
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g3.png'
+      ),
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g4.png'
+      ),
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g5.png'
+      ),
+      CarouselItem(
+        title: "",
+        description: "",
+        image: 'assets/images/g6.png'
+      )
+    ];
+  } 
 }

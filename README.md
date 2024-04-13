@@ -19,6 +19,12 @@ Lib
 - Pages
 - Widgets
 
+# Example code and credits
+
+- Section Builder:   https://github.com/nurshat13/Flutter-Spotify-UI-Clone
+- FadeIn Animations: https://github.com/nikhil7299/smart_home
+- Free videos and images: https://vecteezy.com
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

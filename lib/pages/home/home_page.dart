@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musicplayerapp/animations/fade_in_slide.dart';
 
 import 'package:musicplayerapp/pages/home/widgets/home_header_widget.dart';
 import 'package:musicplayerapp/pages/home/widgets/home_jumpback_widget.dart';
@@ -25,11 +26,11 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              HomePlayList(),
-              HomeNewRelease(),
-              JumpBack(),
-              VideoSection(),
-              Suggestions(),
+              FadeInSlide(duration: 0.4, child: HomePlayList()),
+              FadeInSlide(duration: 0.6, child: HomeNewRelease()),
+              FadeInSlide(duration: 0.8, child: JumpBack()),
+              FadeInSlide(duration: 1, child: VideoSection()),
+              FadeInSlide(duration: 1.2, child: Suggestions()),
             ]
           )
         )

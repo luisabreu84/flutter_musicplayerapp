@@ -36,6 +36,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: SafeArea(
         child: Stack(
+          fit: StackFit.expand,
           children: <Widget>[
             _content[_index],
             const PlayerBar()

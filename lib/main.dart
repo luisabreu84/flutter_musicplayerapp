@@ -10,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,16 +17,13 @@ class MyApp extends StatelessWidget {
       title: 'Music Player',
       initialRoute: 'intro',
       routes: {
-        'intro': ( _ ) => const IntroPage(),
-        'home': ( _ ) => const MainPage(),
+        'intro': (_) => const IntroPage(),
+        'home': (_) => const MainPage(),
       },
       theme: ThemeData(
         brightness: Brightness.dark,
-        colorScheme: const ColorScheme.dark(
-          background: Colors.black
-        ),
+        colorScheme: const ColorScheme.dark(background: Colors.black),
         useMaterial3: true,
-      )
-    );
+      ));
   }
 }
